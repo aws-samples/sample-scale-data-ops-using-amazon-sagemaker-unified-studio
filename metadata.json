@@ -1,0 +1,22 @@
+{
+  "domain_name": "sagemaker-unified-studio",
+  "sso": {
+    "type": "IAM_IDC",
+    "user_assignment": "MANUAL"
+  },
+  "blueprint_region": <aws-region>,
+  "blueprint_identifiers": [],
+  "account_association": [
+    {
+      "target_account_id": "<associated-account-id>",
+      "permissions": "arn:aws:ram::aws:permission/AWSRAMPermissionsAmazonDatazoneDomainExtendedServiceAccess",
+      "resource_share_name": "<resource-share-name>",
+      "domain_arn": "arn:aws:datazone:<aws-region>:<domain-account-id>:domain/<datazone-domain-id>"
+    }
+  ],
+  "tags": {
+    "Environment": "dev",
+    "Service": "sagemaker unified studio"
+  }
+}
+

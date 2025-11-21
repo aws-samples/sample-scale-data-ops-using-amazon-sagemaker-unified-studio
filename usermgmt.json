@@ -1,0 +1,26 @@
+{
+  "domain_name": "sagemaker-unified-studio",
+  "domain_arn": "arn:aws:datazone:<aws-region>:<domain-account-id>:domain/<datazone-domain-id>",
+  "sso_users": [
+    {
+      "username": "example1@anycompany.com"
+    },
+    {
+      "username": "example2@anycompany.com"
+    }
+  ],
+  "sso_groups": [
+    {
+      "groupname": "Consumer"
+    },
+    {
+      "groupname": "Producer"
+    }
+  ],
+  "root_domain_owners": [
+    {
+      "role_arn": "arn:aws:iam::<domain-account-id>:role/<role-name>"
+    }
+  ]
+}
+
