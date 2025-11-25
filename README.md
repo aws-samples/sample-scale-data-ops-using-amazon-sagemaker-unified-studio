@@ -119,6 +119,12 @@ Update `metadata.json` and `usermgmt.json` before deploying the solution.
 }
 ```
 
+## Account Association 
+### 1. After deploying the SMUS Domain, onboard AWS Accounts using RAM
+```
+python account_association.py --metadata-path metadata.json
+```
+
 **Configuration Notes:**
 - `blueprint_region`: AWS Region where resources will be deployed
 - `target_account_id`: AWS Account ID that needs to be associated
@@ -154,6 +160,18 @@ Update `metadata.json` and `usermgmt.json` before deploying the solution.
   ]
 }
 ```
+
+## User Management
+### 1. After deploying the SMUS Domain, add SSO users and groups to the domain:
+```
+python user_management.py --metadata-path usermgmt.json
+```
+
+### 2. After deploying the SMUS Domain, add IAM Role/ SSO users & groups as root domain owner:
+```
+python root_domain_mgmt.py --metadata-path usermgmt.json
+```
+
 
 **Configuration Notes:**
 - `sso_users`: SSO users to be added to the domain
